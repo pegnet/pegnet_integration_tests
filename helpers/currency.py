@@ -28,3 +28,4 @@ def get_all_currency():
                 "pZEC"]
 
     return currency
+

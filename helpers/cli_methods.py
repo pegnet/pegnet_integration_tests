@@ -1,7 +1,7 @@
 import requests, logging, shlex
 from subprocess import Popen, PIPE
 
-def send_command_to_cli_and_receive_text(cli_command):
+def send_command_to_cli_and_receive_text(cli_command: object) -> object:
     args = shlex.split(''.join((cli_command)))
     p = Popen(args, stdout=PIPE, stdin=PIPE, stderr=PIPE)
     text = p.communicate()
